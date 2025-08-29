@@ -19,7 +19,10 @@ The **[Mini Finance](https://www.tooplate.com/live/2135_mini_finance)** project 
 ✅ **Settings & Help Center** – Enables users to update preferences and seek assistance.  
 
 ---
+## Project Outline
+This project demonstrates Git operations like clone, pull, push, PR—a hands-on Mini-Finance tool.
 
+---
 ## **📌 What You Will Learn?**  
 By working on this project, you will practice **Git & GitHub in real-world workflows**, including:  
 
