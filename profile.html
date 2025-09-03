@@ -393,9 +393,32 @@ Bootstrap 5 Dashboard Admin Template
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/custom.js"></script>
-         <footer style="text-align:center; padding:10px; font-size:14px; color:#555; border-top:1px solid #ddd; margin-top:20px;">
-  Mini Finance v1.0 — Deployed on 28 Aug 2025 — By Angela C Chibuike
-</footer>
+         <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Finance</title>
+</head>
+<body>
+<div id="footer-placeholder"></div>
 
+<!-- Load footer and set custom date/name -->
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    // Insert footer HTML
+    document.getElementById('footer-placeholder').innerHTML = data;
+
+    // Set custom date
+    const deployDate = new Date(2025, 7, 29); // 29 Aug 2025
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    document.getElementById('deployDate').textContent = deployDate.toLocaleDateString('en-US', options);
+
+    // Set your name
+    document.getElementById('authorName').textContent = "Angela C. Chibuike";
+  });
+</script>
     </body>
 </html>

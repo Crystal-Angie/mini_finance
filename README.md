@@ -227,3 +227,47 @@ See you in the **LinkedIn network!** 🎉
 Assignment Note
 
 This project demonstrates Git operations like clone, pull, push, and creating a Pull Request—a hands-on Mini-Finance tool.
+
+
+
+
+
+
+## Dynamic Footer Snippet
+
+This project uses a **shared footer** (`footer.html`) that is dynamically loaded into every page using JavaScript.  
+Any updates made in `footer.html` file automatically appear across all pages without editing each file individually.  
+The footer also shows the **current date** and your **name**, ensuring consistency and easy maintenance.
+
+### Footer HTML (`footer.html`)
+
+```html
+<footer style="text-align:center; padding:15px; font-size:16px; color:#333; background:#f9f9f9; border-top:2px solid #ccc; margin-top:20px;">
+  Mini Finance v1.0 — Deployed on <span id="deployDate"></span> — By <span id="authorName"></span>
+</footer>
+
+
+JavaScript (added to each page)
+
+js
+
+
+<!-- Footer placeholder -->
+<div id="footer-placeholder"></div>
+
+<script>
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    // Insert footer HTML
+    document.getElementById('footer-placeholder').innerHTML = data;
+
+    // Always show today's date
+    const today = new Date();
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    document.getElementById('deployDate').textContent = today.toLocaleDateString('en-US', options);
+
+    // Add your name
+    document.getElementById('authorName').textContent = "Your Name Here";
+  });
+</script>
