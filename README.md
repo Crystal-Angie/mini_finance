@@ -231,7 +231,7 @@ This project demonstrates Git operations like clone, pull, push, and creating a 
 
 
 
-
+## DAY 1 & 2
 
 ## Dynamic Footer Snippet
 
@@ -250,8 +250,6 @@ The footer also shows the **current date** and your **name**, ensuring consisten
 JavaScript (added to each page)
 
 js
-
-
 <!-- Footer placeholder -->
 <div id="footer-placeholder"></div>
 
@@ -271,3 +269,31 @@ fetch('footer.html')
     document.getElementById('authorName').textContent = "Your Name Here";
   });
 </script>
+
+
+## DAY 3 & 4
+### Updated Footer  HTML (tweaked font & spacing and Added commit hash)
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<footer style="
+  text-align:center; 
+  padding:20px 10px; 
+  font-size:16px; 
+  line-height:1.6; 
+  font-family:'Poppins', sans-serif; 
+  color:#111; 
+  background:#f9f9f9; 
+  border-top:2px solid #ccc; 
+  margin-top:30px;
+">
+  <p style="margin:0; font-weight:500;">
+    Mini Finance v1.0 — Deployed on <span id="deployDate"></span> — By <span id="authorName"></span> — <span id="commitHash"></span>
+  </p>
+</footer>
+
+
+JavaScript (added to each page to reflect hash)
+
+// Set commit hash
+    document.getElementById("commitHash").textContent = "rev: 393f15d";
+
