@@ -412,12 +412,15 @@ fetch('footer.html')
     document.getElementById('footer-placeholder').innerHTML = data;
 
     // Set custom date
-    const deployDate = new Date(2025, 7, 30); // 30 Aug 2025
+    const deployDate = new Date(2025, 7, 31); // 31 Aug 2025
     const options = { day: '2-digit', month: 'short', year: 'numeric' };
     document.getElementById('deployDate').textContent = deployDate.toLocaleDateString('en-US', options);
 
     // Set your name
     document.getElementById('authorName').textContent = "Angela C. Chibuike";
+
+    // Set commit hash
+    document.getElementById("commitHash").textContent = "rev: 5aed588";
   });
 </script>
     </body>
